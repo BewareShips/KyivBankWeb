@@ -5,6 +5,10 @@ export const newExpenseError = createAction('newExpenseError');
 export const editExpenseError = createAction('editExpenseError');
 export const deleteExpenseError = createAction('deleteExpenseError');
 
+export const depositExpenseError = createAction('newDepositError');
+export const transferExpenseError = createAction('transferExpenseError');
+export const withdrawExpenseError = createAction('withdrawExpenseError');
+
 export const expensesSlice = createSlice({
     name: 'expenses',
     initialState: {

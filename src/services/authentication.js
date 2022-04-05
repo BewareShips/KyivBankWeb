@@ -25,6 +25,17 @@ export const SignIn = async (dispatch, credentials) => {
     }
 }
 
+// export const getUserByName = async (dispatch, name="qaq") => {
+//     try {
+//         // api call
+//         const { data } = await axiosInstance.get(`/get_account?name=${name}`);
+//         console.log(data,'daataaa')
+//         dispatch(userAuthenticated(data));
+//     } catch {
+//         console.log('Error!');
+//     }
+// }
+
 export const ThirdPartySignIn = async (dispatch, token) => {
     try {
         // api call        

@@ -7,7 +7,7 @@ import StatisticsPage from './pages/StatisticsPage';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { userAuthenticated } from './app/authenticationSlice';
-import OperationPage from './pages/OperationPage';
+
 
 const App = () => {
   const { isLoggedIn } = useSelector(state => state.authenticationSlice);
@@ -28,7 +28,7 @@ const App = () => {
       <Route path="/signin" render={() => (isLoggedIn ? <Redirect to='/' /> : <SignInPage />)} />
       <Route path="/statistics" render={() => (isLoggedIn ? <StatisticsPage /> : <SignInPage />)} />
 
-      <Route path="/operation" render={() => (isLoggedIn ? <OperationPage /> : <SignInPage />)} />
+      
 
       <Route component={() => <h2>Page not found!</h2>} />
     </Switch>
