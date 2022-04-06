@@ -10,6 +10,10 @@ export const authenticationSlice = createSlice({
     reducers: {
         userAuthenticated: (state, action) => {
             sessionStorage.setItem('token', action.payload.token);
+            
+             localStorage.setItem('userName', action.payload.username);
+            console.log('userName', action.payload)
+            // sessionStorage.setItem('userName', action.payload.username);
             return {
                 ...state, ...{
                     token: action.payload.token,
@@ -20,6 +24,7 @@ export const authenticationSlice = createSlice({
         },
         logout: () => {
             sessionStorage.clear();
+            
         }
     }
 });

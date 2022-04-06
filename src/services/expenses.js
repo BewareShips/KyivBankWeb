@@ -1,7 +1,7 @@
 import {
     //setExpenses, 
     newExpense,
-    setExpensesError,  newExpenseError, depositExpenseError, withdrawExpenseError, transferExpenseError, 
+    setExpensesError,  newExpenseError, depositExpenseError, withdrawExpenseError, transferExpenseError, setExpenses, 
 } from '../app/expensesSlice';
 import * as axios from 'axios';
 
@@ -19,7 +19,7 @@ export const GetExpenses = async (dispatch) => {
         // api call
         const { data } = await axiosInstance.get();
         console.log(data,'dataaaa')
-        //dispatch(setExpenses(data));
+        dispatch(setExpenses(data));
     } catch {
         dispatch(setExpensesError());
     }
